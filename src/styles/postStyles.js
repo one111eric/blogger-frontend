@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 
 export const PostContainer = styled.div`
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  list-style: none;
 `;
 
-export const PostTitle = styled.h3`
-    color: #333;
+export const PostTitle = styled.h2`
+  font-size: 24px;
+  margin-bottom: 8px;
+`;
+
+export const PostContent = styled.p`
+  font-size: 16px;
 `;

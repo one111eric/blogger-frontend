@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchPostById } from '../services/api'; // Create fetchPostById in api.js
+import { PostContainer, PostContent, PostTitle } from '../styles/postStyles'; 
 
 const PostDetails = () => {
   const { id } = useParams(); 
@@ -25,8 +26,11 @@ const PostDetails = () => {
 
   return (
     <div>
-      <h2>{post.title}</h2>
-      {/* ... display post content, author, etc. */}
+        <PostContainer>
+            <PostTitle>{post.title}</PostTitle> 
+            <PostContent>{post.content}</PostContent>
+            {/* ... rest of your Post component */}
+        </PostContainer>
     </div>
   );
 };

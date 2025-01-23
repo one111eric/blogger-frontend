@@ -26,8 +26,8 @@ export const createPost = async (post) => {
 
 export const fetchPostById = async (postId) => {
     try {
-        const response = await axios.get(`<span class="math-inline">{API_BASE_URL}/posts/</span>{postId}`); 
-        return response.data;
+        const response = await axios.get(`${API_BASE_URL}/v1/posts/${postId}`); 
+        return response.data.post;
     } catch (error) {
         console.error('Error fetching post by ID:', error);
         throw error;
